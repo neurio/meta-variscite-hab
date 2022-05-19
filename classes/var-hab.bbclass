@@ -6,9 +6,10 @@ SRC_URI:append:hab = " ${NXP_CST_URI};name=cst;subdir=cst;"
 CST_BIN ?= "${WORKDIR}/cst/release/linux64/bin/cst"
 
 # Override CST_CERTS_URI in local.conf with customer repository:
-# CST_CERTS_REV ?= "56ad83a9962fb1cd8b4a18dc72993de7e7894bc5"
-# CST_CERTS_URI ?= "git://github.com/varigit/var-hab-certs.git;protocol=http;branch=master;rev=${CST_CERTS_REV}"
-# SRC_URI:append:hab = " ${CST_CERTS_URI};name=cst-certs;destsuffix=cst-certs;"
+CST_CERTS_REV ?= "56ad83a9962fb1cd8b4a18dc72993de7e7894bc5"
+CST_CERTS_URI ?= "git://github.com/varigit/var-hab-certs.git;protocol=http;branch=master;rev=${CST_CERTS_REV}"
+SRC_URI:append:hab = " ${CST_CERTS_URI};name=cst-certs;destsuffix=cst-certs;"
+SRCREV:cst-certs = "${CST_CERTS_REV}"
 
 CST_CRT_ROOT:mx8m-nxp-bsp ?= "${WORKDIR}/cst-certs/iMX8M"
 CST_CRT_ROOT:mx8-nxp-bsp ?= "${WORKDIR}/cst-certs/iMX8"
