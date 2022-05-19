@@ -19,7 +19,7 @@ help() {
         echo " Error: ${1}"
     fi
     echo
-    echo " Usage: ${DIR_SCRIPT}/${FILE_SCRIPT} <mx8m|mx8x|mx8> <Path to SRK HASH> <output file>"
+    echo " Usage: ${DIR_SCRIPT}/${FILE_SCRIPT} <mx8m-nxp-bsp|mx8x-nxp-bsp|mx8> <Path to SRK HASH> <output file>"
     echo
     echo " Example: ${DIR_SCRIPT}/${FILE_SCRIPT} SRK1_2_3_4_fuse.bin fuse.cmds"
     echo
